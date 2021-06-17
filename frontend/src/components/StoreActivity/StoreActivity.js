@@ -1,11 +1,11 @@
 import { formatDate, formatAmount } from "../../utils/format"
-import "./BankActivity.css"
+import "./StoreActivity.css"
 import { Link } from "react-router-dom"
 
-export default function BankActivity({ transactions = [], transfers = [] }) {
+export default function StoreActivity({ products = [], }) {
   return (
-    <div className="BankActivity">
-      <h2>Transactions</h2>
+    <div className="StoreActivity">
+      <h2>Products</h2>
       <div className="table">
         <div className="table-header table-row">
           <span className="col x4">Description</span>
@@ -13,22 +13,22 @@ export default function BankActivity({ transactions = [], transfers = [] }) {
           <span className="col x2">Amount</span>
           <span className="col x15">Date</span>
         </div>
-        {transactions.map((transaction) => (
-          <div className="table-row" key={transaction.id}>
-            <Link to={`/transactions/${transaction.id}`}>
+        {products.map((product) => (
+          <div className="table-row" key={product.id}>
+            <Link to={`/products/${product.id}`}>
             <span className="col x4">
-              <Arrow amount={transaction.amount} />
-              {transaction.description}
+              <Arrow amount={product.price} />
+              {product.description}
             </span>
-            <span className="col x2">{transaction.category}</span>
-            <span className="col x2">{formatAmount(transaction.amount)}</span>
-            <span className="col x15">{formatDate(transaction.postedAt)}</span>
+            <span className="col x2">{product.category}</span>
+            <span className="col x2">{formatAmount(product.price)}</span>
+            <span className="col x15">{formatDate(product.postedAt)}</span>
             </Link>
           </div>
         ))}
       </div>
 
-      <h2>Transfers</h2>
+      {/* <h2>Transfers</h2>
       <div className="table">
         <div className="table-header table-row">
           <span className="col x4">Memo</span>
@@ -47,7 +47,7 @@ export default function BankActivity({ transactions = [], transfers = [] }) {
             <span className="col x15">{formatDate(transfer.postedAt)}</span>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }

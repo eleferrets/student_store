@@ -1,7 +1,7 @@
-import "./AddTransaction.css";
+import "./AddProduct.css";
 import { useState } from "react";
 import axios from "axios";
-export default function AddTransaction( addTransaction) {
+export default function AddProduct( AddProduct) {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState(false);
   const [form, setForm] = useState({
@@ -12,9 +12,9 @@ export default function AddTransaction( addTransaction) {
   const handleOnSubmit = async () => {
     setIsProcessing(true);
     try {
-      const res = await axios.post(`http://localhost:3001/bank/transactions/`, {post: form});
-      if (res?.data?.transaction) {
-        addTransaction(res.data.transaction)
+      const res = await axios.post(`http://localhost:3001/store/products/`, {post: form});
+      if (res?.data?.product) {
+        AddProduct(res.data.product)
       }
     } catch (err) {
       setError(err);
@@ -32,8 +32,8 @@ export default function AddTransaction( addTransaction) {
   };
 
   return (
-    <div className="AddTransaction">
-      <h2>Add Transaction</h2>
+    <div className="AddProduct">
+      <h2>Add Product</h2>
 
       <div className="form">
         <div className="fields">
@@ -67,7 +67,7 @@ export default function AddTransaction( addTransaction) {
             />
           </div>
 
-          <button className="btn add-transaction" type="submit" onClick={handleOnSubmit}>
+          <button className="btn add-product" type="submit" onClick={handleOnSubmit}>
             Add
           </button>
         </div>

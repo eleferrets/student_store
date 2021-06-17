@@ -1,14 +1,14 @@
-.AddTransaction {
+.AddProduct {
   /* height: 300px; */
   display: flex;
   flex-direction: column;
 }
-.AddTransaction h2 {
+.AddProduct h2 {
   color: black;
   margin-bottom: 24px;
   font-size: 28px;
 }
-.AddTransaction button {
+.AddProduct button {
   border: none;
   outline: none;
   background: none;
@@ -24,34 +24,34 @@
   width: 150px;
   font-size: 18px;
 }
-.AddTransaction button:active {
+.AddProduct button:active {
   transform: translateY(1px);
 }
-.AddTransaction .form {
+.AddProduct .form {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
 }
-.AddTransaction .fields {
+.AddProduct .fields {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   flex: 1;
   gap: 20px;
 }
-.AddTransaction .fields .field {
+.AddProduct .fields .field {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.AddTransaction .fields .field label {
+.AddProduct .fields .field label {
   color: black;
   margin-bottom: 7px;
   margin-left: 5px;
   font-size: 16px;
 }
-.AddTransaction .fields .field input {
+.AddProduct .fields .field input {
   height: 60px;
   width: 100%;
   background: #fffdfd;
@@ -59,10 +59,10 @@
   font-size: 18px;
   padding: 0 15px;
 }
-.AddTransaction .isProcessing {
+.AddProduct .isProcessing {
   margin-bottom: 10px;
 }
-.AddTransaction .red {
+.AddProduct .red {
   margin-bottom: 10px;
   color: red;
 }

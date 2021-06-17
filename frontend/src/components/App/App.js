@@ -4,19 +4,19 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Home from "../Home/Home";
 import "./App.css";
-import TransactionDetail from "../TransactionDetail/TransactionDetail";
-import AddTransaction from "../AddTransaction/AddTransaction";
+import ProductDetail from "../ProductDetail/ProductDetail";
+import AddProduct from "../AddProduct/AddProduct";
 
 export default function App() {
   //const [posts, setPosts] = useState([])
   const [isFetching, setFetching] = useState(false);
   const [error, setError] = useState(null);
   const [filterInputValue, setInputValue] = useState(null);
-  const [transactions, setTransactions] = useState([]);
-  const [transfers, setTransfers] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  const AddTransaction = (newTransaction) => {
-    setTransactions(t => [...t, newTransaction])
+
+  const AddProducts = (newProduct) => {
+    setProducts(t => [...t, newProduct])
   }
   const handleOnInputChange = async (evt) => {
     setInputValue();
@@ -25,7 +25,7 @@ export default function App() {
   // Every time the site or inside the array rendered
   // It will run only once as there is nothing in the array
   useEffect(() => {
-    const fetchTransactions = async () => {
+    const fetchProducts = async () => {
       //   try {
       //     // attaches data to res.data
       //     const res = await axios.get("http://localhost:3001/bank")
@@ -41,36 +41,36 @@ export default function App() {
 
       setFetching(true);
       try {
-        const transferRes = await axios.get(
-          "http://localhost:3001/bank/transfers"
+        // const transferRes = await axios.get(
+        //   "http://localhost:3001/bank/transfers"
+        // );
+        // //const transferData = transferRes.data;
+        // const transfers = transferRes?.data?.transfers;
+        // setTransfers(transfers);
+        const res = await axios.get(
+          "http://localhost:3001/store/products"
         );
-        //const transferData = transferRes.data;
-        const transfers = transferRes?.data?.transfers;
-        setTransfers(transfers);
-        const transactionRes = await axios.get(
-          "http://localhost:3001/bank/transactions"
-        );
-       // const transactionData = transactionRes.data;
-        const transactions = transactionRes?.data?.transactions;
+       // const transactionData = res.data;
+        const transactions = res?.data?.transactions;
         //console.log(transactions)
-        setTransactions(transactions);
+        setProducts(transactions);
       } catch (err) {
         setError(err);
       }
 
       setFetching(false);
     };
-    fetchTransactions();
+    fetchProducts();
   }, []);
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar filterInputValue={filterInputValue} handleOnInputChange={handleOnInputChange} />
         <Routes>
-          <Route path="/" element={<Home AddTransaction={AddTransaction} />}></Route>
+          <Route path="/" element={<Home AddProduct={AddProduct} />}></Route>
           <Route
-            path="/transactions/:transactionId"
-            element={<TransactionDetail />}
+            path="/products/:productId"
+            element={<ProductDetail />}
           ></Route>
         </Routes>
         {/* <Link to="/"></Link> */}
