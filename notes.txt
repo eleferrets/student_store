@@ -1,0 +1,72 @@
+// static async recordTransfer(transfer) {
+  //   // create a new transfer
+
+  //   if (!transfer) {
+  //     throw new BadRequestError(`No transfer sent.`);
+  //   }
+  //   const requiredFields = ["recipientEmail", "memo", "amount"];
+  //   requiredFields.forEach((field) => {
+  //     if (!transfer[field] && transaction[field] !== 0) {
+  //       throw new BadRequestError(`Field: "${field}" is required in transfer`);
+  //     }
+  //   });
+
+  //   const transfers = await Bank.listTransfers();
+  //   const transferId = transfers.length + 1;
+  //   const postedAt = new Date().toISOString();
+
+  //   const newTransfer = { id: transferId, postedAt, ...transfer };
+
+  //   storage.get("transfers").push(newTransfer).write();
+
+  //   return newTransfer;
+  // }
+
+    // static async listTransfers() {
+  //   // list all items in the transfers array
+  //   const transfers = storage.get("transfers").value();
+  //   return transfers;
+  // }
+
+  // static async fetchTransactionById(transactionId) {
+  //   // fetch a single transaction
+  //   const transaction = storage
+  //     .get("transactions")
+  //     .find({ id: Number(transactionId) })
+  //     .value();
+  //   return transaction;
+  // }
+  // // list all transfers
+// router.get("/transfers", async (req, res, next) => {
+//   try {
+//     const transfers = await Store.listTransfers();
+//     res.status(200).json({ transfers });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
+// // create a new transfer
+// router.post("/transfers", async (req, res, next) => {
+//   try {
+//     const transfer = req.body.transfer;
+//     const newTransfer = await Store.recordTransfer(transfer);
+//     res.status(201).json({ transfer: newTransfer });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
+// // fetch single transfer
+// router.get("/transfers/:transferId", async (req, res, next) => {
+//   try {
+//     const transferId = req.params.transferId;
+//     const transfer = await Store.fetchTransferById(transferId);
+//     if (!transfer) {
+//       throw new NotFoundError("Transfer not found");
+//     }
+//     res.status(200).json({ transfer });
+//   } catch (err) {
+//     next(err);
+//   }
+// });

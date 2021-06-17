@@ -1,0 +1,12 @@
+post at: http://localhost:3001/store/products
+{
+	"products": {
+      "id": 9,
+      "name": "Rice",
+      "category": "food",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+      "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+      "description": "Delicious grain.",
+      "price": 0.25
+	}
+}

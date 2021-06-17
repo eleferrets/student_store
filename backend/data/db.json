@@ -1,41 +1,76 @@
 {
-  "transfers": [
+  "products": [
     {
       "id": 1,
-      "postedAt": "2021-03-01T10:30:00.123Z",
-      "recipientEmail": "landlord@gmail.com",
-      "memo": "rent payment",
-      "amount": -99999.99
-    }
-  ],
-  "transactions": [
-    {
-      "id": 1,
-      "postedAt": "2021-02-28T01:00:00.475Z",
-      "description": "Programming Shirt that says 'There's no place like 127.0.0.1'",
-      "category": "Fashion",
-      "amount": -20000
+      "name": "Rice Krispies",
+      "category": "food",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RKTsquares.jpg",
+      "source": "https://en.wikipedia.org/wiki/Rice_Krispies_Treats",
+      "description": "Delicious corn-based rice grains melted together with marshmallows into a square-like shape.",
+      "price": 0.99
     },
     {
       "id": 2,
-      "postedAt": "2021-02-29T10:15:00.475Z",
-      "description": "Paycheck from Fintech Programming Inc.",
-      "category": "Income",
-      "amount": 1000000
+      "name": "Flamin Hot Cheetos",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/896/400/009/0879/front_en.14.full.jpg",
+      "source": "https://world.openfoodfacts.org/cgi/product_image.pl?code=8964000090879&id=front_en",
+      "description": "No one knows what's in the powder that covers these snacks, but wow is it amazing!",
+      "price": 1.5
     },
     {
       "id": 3,
-      "postedAt": "2021-03-22T12:22:00.475Z",
-      "description": "Cracking the Coding Interview by Gayle Laakmann McDowell",
-      "category": "Book",
-      "amount": -1498
+      "name": "Coconut Water",
+      "category": "drink",
+      "image": "https://static.openfoodfacts.org/images/products/503/886/213/8161/front_fr.57.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/5038862138161/coconut-water-innocent",
+      "description": "100% coconut water",
+      "price": 2
     },
     {
       "id": 4,
-      "postedAt": "2021-03-24T08:52:00.475Z",
-      "description": "Extra Large Iced Coffee, Local Brew Co.",
-      "category": "Coffee",
-      "amount": -365
+      "name": "Peanut Butter",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/376/002/050/7350/front_fr.223.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/3760020507350/pur-beurre-de-cacahuete-jardin-bio",
+      "description": "Butter made from nuts!",
+      "price": 3
+    },
+    {
+      "id": 5,
+      "name": "Pineapple Juice",
+      "category": "drink",
+      "image": "https://static.openfoodfacts.org/images/products/20093273/front_en.84.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/20093273/pineapple-juice-solevita",
+      "description": "Juice made from pineapples, and it is pine oil free.",
+      "price": 4
+    },
+    {
+      "id": 6,
+      "name": "Cinnamon Bun Ice Cream",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/871/210/069/4707/front_fr.33.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/8712100694707/ben-jerry-s-glace-pot-cinnamon-buns-caramel",
+      "description": "Cinnamon bun ice cream from Ben & Jerry's",
+      "price": 5
+    },
+    {
+      "id": 7,
+      "name": "Cinnamon Buns - 2 Pack",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/140/212/972/0002/front_fr.4.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/1402129720002/kanelbullar-cinnamon-buns-ikea",
+      "description": "A cinnamon bun 2-pack from Ikea.",
+      "price": 2
+    },
+    {
+      "id": 8,
+      "name": "Cinnamon Bun Oreo",
+      "category": "food",
+      "image": "https://static.openfoodfacts.org/images/products/004/400/004/4435/front_en.12.400.jpg",
+      "source": "https://world.openfoodfacts.org/product/0044000044435/oreo-cookies-golden-1x12-2-oz-nabisco",
+      "description": "The best oreo flavor aside from the original and red velvet cake!",
+      "price": 6
     }
   ]
 }
