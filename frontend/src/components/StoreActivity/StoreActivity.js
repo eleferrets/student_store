@@ -6,7 +6,7 @@ export default function StoreActivity({ products = [], }) {
   return (
     <div className="StoreActivity">
       <h2>Products</h2>
-      <div className="table">
+      {/* <div className="table">
         <div className="table-header table-row">
           <span className="col x4">Description</span>
           <span className="col x2">Category</span>
@@ -26,7 +26,7 @@ export default function StoreActivity({ products = [], }) {
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* <h2>Transfers</h2>
       <div className="table">

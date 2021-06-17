@@ -1,5 +1,5 @@
 import { formatAmount, formatDate } from "../../utils/format";
-import "./ProductDetail.css";
+import "./ProductDetail.css" ;
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -15,9 +15,10 @@ export default function ProductDetail() {
       setIsLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:3001/bank/products/${productId}`
+          `http://localhost:3001/store/products/${productId}`
         );
-        if (res?.data?.product) setProduct(res.data.product);
+        //console.log(res)
+        if (res?.data?.products) setProduct(res.data.products);
       } catch (err) {
         setError(err);
       }
@@ -32,12 +33,13 @@ export default function ProductDetail() {
 
     return (
       <>
+      
         <p className="description">{product?.description}</p>
         <div className="meta">
-          <p className={`price ${product?.price < 0 ? "minus" : ""}`}>
+          <p className={`price`}>
             {formatAmount(product?.price)}
           </p>
-          <p className="date">{formatDate(product?.postedAt)}</p>
+          {/* <p className="date">{formatDate(product?.postedAt)}</p> */}
         </div>
       </>
     );

@@ -10,3 +10,6 @@ post at: http://localhost:3001/store/products
       "price": 0.25
 	}
 }
+
+
+Access localhost:3000/products/# for individual product

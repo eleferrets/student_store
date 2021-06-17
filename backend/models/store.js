@@ -3,23 +3,23 @@ const { storage } = require("../data/storage");
 
 class Store {
   static async listProducts() {
-    // list all items in the transactions array
-    const transactions = storage.get("products").value();
-    return transactions;
+    // list all items in the products array
+    const products = storage.get("products").value();
+    return products;
   }
 
   static async fetchProductsById(productId) {
-    // fetch a single transfer
-    const transfer = storage
+    // fetch a single product
+    const product = storage
       .get("products")
       .find({ id: Number(productId) })
       .value();
-    return transfer;
+    return product;
   }
 
   static async recordProducts(product) {
     // create a new product
-    console.log(product);
+   //console.log(product);
     if (!product) {
       throw new BadRequestError(`No product sent.`);
     }

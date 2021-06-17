@@ -40,14 +40,14 @@
   justify-content: space-between;
   width: 100%;
 }
-.ProductDetail .card .amount {
+.ProductDetail .card .price {
   display: flex;
   align-items: center;
   padding: 8px 12px;
   background: rgba(44, 65, 71, 1);
   color: white;
 }
-.ProductDetail .card .amount.minus {
+.ProductDetail .card .price.minus {
   display: flex;
   align-items: center;
   padding: 8px 12px;

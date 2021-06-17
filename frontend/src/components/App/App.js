@@ -15,7 +15,7 @@ export default function App() {
   const [products, setProducts] = useState([]);
 
 
-  const AddProducts = (newProduct) => {
+  const AddProduct = (newProduct) => {
     setProducts(t => [...t, newProduct])
   }
   const handleOnInputChange = async (evt) => {
@@ -51,9 +51,9 @@ export default function App() {
           "http://localhost:3001/store/products"
         );
        // const transactionData = res.data;
-        const transactions = res?.data?.transactions;
-        //console.log(transactions)
-        setProducts(transactions);
+        const products = res?.data?.products;
+        //console.log(products)
+        setProducts(products);
       } catch (err) {
         setError(err);
       }
@@ -73,6 +73,7 @@ export default function App() {
             element={<ProductDetail />}
           ></Route>
         </Routes>
+        
         {/* <Link to="/"></Link> */}
       </BrowserRouter>
     </div>

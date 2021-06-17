@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import FilterInput from "../FilterInput/FilterInput";
 import codepath from "../../assets/codepath.svg";
-import avatar from "../../assets/avatar.png";
 import "./Navbar.css";
 
 export default function Navbar(filterInputValue, handleOnInputChange) {
@@ -19,9 +18,10 @@ export default function Navbar(filterInputValue, handleOnInputChange) {
       </div>
 
       <div className="content">
-        <div className="socials">
+        
+        <div className="links">
           
-        </div>
+          </div>
         {/* <div className="notifications">
           <i className="material-icons md-36">notifications</i>
           <div className="green-dot" />
