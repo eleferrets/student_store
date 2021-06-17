@@ -10,8 +10,8 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 #### CORE FEATURES
 
-- [ ] The API should contain an endpoint that serves an array of all products in the store
-- [ ] A Store model should handle all data management logic for the API and be the interface for read/write operations to the JSON file.
+- [x] The API should contain an endpoint that serves an array of all products in the store
+- [x] A Store model should handle all data management logic for the API and be the interface for read/write operations to the JSON file.
 - [ ] The frontend should include a landing page that displays the products available for purchase.
 - [ ] Each product should have an individual page that shows the details of the product and allows the user to add that product to their shopping cart.
 
