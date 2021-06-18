@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome} from '@fortawesome/free-solid-svg-icons'
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import axios from "axios";
@@ -77,9 +78,9 @@ export default function App() {
 >
     <SideNav.Toggle />
     <SideNav.Nav defaultSelected="home">
-        <NavItem eventKey="home">
+        <NavItem eventKey="home" >
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+            <FontAwesomeIcon icon={faHome} />
             </NavIcon>
             <NavText>
                 Home
@@ -106,7 +107,7 @@ export default function App() {
     </SideNav.Nav>
 </SideNav>
         <Routes>
-          <Route path="/" element={<Home AddProduct={AddProduct} />}></Route>
+          <Route path="/" element={<Home products={products} />}></Route>
           <Route
             path="/products/:productId"
             element={<ProductDetail />}

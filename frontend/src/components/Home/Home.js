@@ -4,12 +4,13 @@ import StoreActivity from "../StoreActivity/StoreActivity";
 import Intro from "../Intro/Intro";
 import "./Home.css";
 
-export default function Home() {
+export default function Home( products ) {
   return (
     <div className="Home">
       <Intro />
       {/* <AddProduct /> */}
-      <StoreActivity />
+      {/* {console.log("Hi",products)} */}
+      <StoreActivity products={products.products} />
     </div>
   );
 }

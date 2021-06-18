@@ -72,3 +72,5 @@
 // });
 
 filterInputValue={filterInputValue} handleOnInputChange={handleOnInputChange}
+AddProduct={AddProduct}
+{/* <Arrow amount={product.price} /> */}

@@ -29,7 +29,7 @@ router.get("/products/:productsId", async (req, res, next) => {
   try {
     const productsId = req.params.productsId;
     const products = await Store.fetchProductsById(productsId);
-    console.log("pID", productsId, "p", products)
+   // console.log("pID", productsId, "p", products)
     if (!products) {
       throw new NotFoundError("product not found");
     }

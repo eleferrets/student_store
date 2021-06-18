@@ -33,7 +33,8 @@ export default function ProductDetail() {
 
     return (
       <>
-      
+      <p className="name">{product?.name}</p>
+      <img className="image" src={product?.image} alt={"Gif of " + product?.name}></img>
         <p className="description">{product?.description}</p>
         <div className="meta">
           <p className={`price`}>
@@ -46,10 +47,10 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="productDetail">
+    <div className="ProductDetail">
       <div className="card">
         <div className="title">
-          <h3>product #{productId}</h3>
+          <h3>Product #{productId}</h3>
           <p className="category">{product?.category}</p>
         </div>
 
