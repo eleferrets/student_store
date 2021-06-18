@@ -53,7 +53,7 @@ export default function App() {
         // const transfers = transferRes?.data?.transfers;
         // setTransfers(transfers);
         const res = await axios.get(
-          "${process.env.REACT_APP_REMOTE_HOST_URL}/store/products"
+          "http://localhost:3001/store/products"
         );
        // const transactionData = res.data;
         const products = res?.data?.products;

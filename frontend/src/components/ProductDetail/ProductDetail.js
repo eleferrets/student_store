@@ -15,7 +15,7 @@ export default function ProductDetail() {
       setIsLoading(true);
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_REMOTE_HOST_URL}/store/products/${productId}`
+          `http://localhost:3001/store/products/${productId}`
         );
         //console.log(res)
         if (res?.data?.products) setProduct(res.data.products);
