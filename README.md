@@ -2,7 +2,7 @@
 
 Submitted by: **Brian Balthazar**
 
-Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Student Store Deployed Site](https://fresh-linen.surge.sh/)
 
 ### Application Features
 
