@@ -1,5 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 2 Assignment: Student Store
 
 Submitted by: **Brian Balthazar**
@@ -13,7 +11,7 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 - [x] The API should contain an endpoint that serves an array of all products in the store
 - [x] A Store model should handle all data management logic for the API and be the interface for read/write operations to the JSON file.
 - [x] The frontend should include a landing page that displays the products available for purchase.
-- [ ] Each product should have an individual page that shows the details of the product and allows the user to add that product to their shopping cart.
+- [x] Each product should have an individual page that shows the details of the product.
 
 #### STRETCH FEATURES
 
@@ -36,20 +34,22 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics discussed in the labs, especially with the third lab, helped tremendously with completing the required features of the weekly assignment. I did not fell prepared to complete the features involving writing a cart feature and making orders based on individual users. I have had experience in writing in JSON files, but I have not done it through code in react.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time, I would have worked on more of the stretch features in order to make a more complete application. I would have also tried to make a cart and a sidebar that reacts to the cart. I also would have tried to add the add to cart functionality.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Everything went well for the project demo, but the only thing that did not go as planned was that some of the categories were not displaying properly. I would have liked to add a sub-navigation bar that shows different categories for the products.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- https://reactjsexample.com/tag/sidebar/
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Thank you to all the TAs/instructors for helping me during my project. I would also like to thank my mentor for teaching me some of the concepts for React so that I can complete the project!
