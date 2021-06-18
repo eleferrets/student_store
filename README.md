@@ -26,7 +26,7 @@ Deployed Application (optional): [Student Store Deployed Site](https://wry-opini
 
 ### Walkthrough Video
 
-![image](https://user-images.githubusercontent.com/40572853/122617825-f8848300-d05a-11eb-9e26-09dd3eec6a50.png)
+![image](assignment2.gif)
 
 ### Reflection
 
