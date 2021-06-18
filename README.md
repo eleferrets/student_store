@@ -2,7 +2,7 @@
 
 Submitted by: **Brian Balthazar**
 
-Deployed Application (optional): [Student Store Deployed Site](https://fresh-linen.surge.sh/)
+Deployed Application (optional): [Student Store Deployed Site](https://wry-opinion.surge.sh/)
 
 ### Application Features
 
