@@ -13,12 +13,26 @@ router.get("/products", async (req, res, next) => {
   }
 });
 
-// create new products
+// // create new products
+// router.post("/products", async (req, res, next) => {
+//   try {
+//     const products = req.body.products;
+//     const newProducts = await Store.recordProducts(products);
+//     res.status(201).json({ products: newProducts });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+// create new orders
 router.post("/products", async (req, res, next) => {
   try {
-    const products = req.body.products;
-    const newProducts = await Store.recordProducts(products);
-    res.status(201).json({ products: newProducts });
+    const cart = req.body.cart;
+    const user = req.body.userInfo;
+    const newCart = await Store.recordCart(cart);
+    const newUser = await Store.recordUser(user);
+    // console.log("user",newUser,"cart",newCart);
+    const purchase = await Store.listOrders(newCart, newUser);
+    res.status(201).json({ purchase });
   } catch (err) {
     next(err);
   }

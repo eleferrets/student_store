@@ -13,3 +13,15 @@ post at: http://localhost:3001/store/products
 
 
 Access localhost:3000/products/# for individual product
+
+Thing
+{
+    "cart": {
+        "Rice Krispies": 2,
+        "Flaming Hot Cheetos": 1
+    },
+    "userInfo": {
+        "name": "Person",
+        "email": "person@person.io"
+    }
+}
