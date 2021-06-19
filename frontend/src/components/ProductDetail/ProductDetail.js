@@ -38,7 +38,7 @@ export default function ProductDetail() {
         <p className="description">{product?.description}</p>
         <div className="meta">
           <p className={`price`}>
-            {formatAmount(product?.price)}
+            {"$"+product?.price}
           </p>
           {/* <p className="date">{formatDate(product?.postedAt)}</p> */}
         </div>

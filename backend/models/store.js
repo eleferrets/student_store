@@ -1,6 +1,6 @@
 const { BadRequestError } = require("../utils/errors");
 const { storage } = require("../data/storage");
-const {order} = require("../data/order")
+const { order } = require("../data/order");
 
 class Store {
   static async listProducts() {
@@ -16,47 +16,50 @@ class Store {
     //console.log('user',user[0])
     //console.log("User time",user)
     const products = storage.get("products").value();
-let i = 0;
-let count = 0;
-let productRows = []
-let cartst = JSON.stringify(carts);
-let userst = JSON.stringify(users);
-// for (let x in cart) {
-//   console.log(cart[x]);
-// }
+    let i = 0;
+    let count = 0;
+    let productRows = [];
+    let cartst = JSON.stringify(carts);
+    let userst = JSON.stringify(users);
+    // for (let x in cart) {
+    //   console.log(cart[x]);
+    // }
     // cart.forEach((field) => {
-      for (let field in cart[0] ) {
+    for (let field in cart[0]) {
       //  console.log("field",field);
       // for (let x in field) {
-         
+
       // // }
       for (let product in products) {
         // console.log("1",products[product]['name'],"2",field)
-        if (products[product]['name'] == field) {
-          count += products[product]['price'] * cart[0][field]
+        if (products[product]["name"] == field) {
+          count += products[product]["price"] * cart[0][field];
           // console.log("pr",products[product])
           productRows.push(products[product]);
         }
-        
       }
       // i++;
     }
-  // }
+    // }
     // })
     let pr = JSON.stringify(productRows);
-    var subtotal = count
-    var total = count + (count * 0.07)
-    var lines = `Showing receipt for ${user[0]['name']} available at ${user[0]['email']}
+    var subtotal = count;
+    var total = count + count * 0.07;
+    var lines = `Showing receipt for ${user[0]["name"]} available at ${user[0]["email"]}
     ${cartst}
     Before taxes, the subtotal was ${subtotal},
     After taxes and fees were applied, the total is ${total}
-    `
+    `;
     const string = {
-      "name":`${user[0]['name']}`, "email":`${user[0]['email']}`,
-     "total":`${total}`, "receipt":`${userst}`,
-     "lines":`${lines}` , "productRows":`${pr}`  };
-     let myJSON = JSON.stringify(string);
-    return  string;
+      name: `${user[0]["name"]}`,
+      email: `${user[0]["email"]}`,
+      total: `${total}`,
+      receipt: `${userst}`,
+      lines: `${lines}`,
+      productRows: `${pr}`,
+    };
+    let myJSON = JSON.stringify(string);
+    return string;
   }
 
   static async fetchProductsById(productId) {
@@ -70,7 +73,7 @@ let userst = JSON.stringify(users);
 
   static async recordProducts(product) {
     // create a new product
-   //console.log(product);
+    //console.log(product);
     if (!product) {
       throw new BadRequestError(`No product sent.`);
     }
@@ -94,7 +97,7 @@ let userst = JSON.stringify(users);
 
   static async recordCart(cart) {
     // create a new product
-   //console.log(product);
+    //console.log(product);
     if (!cart) {
       throw new BadRequestError(`No cart sent.`);
     }
@@ -117,7 +120,7 @@ let userst = JSON.stringify(users);
   }
   static async recordUser(user) {
     // create a new product
-   //console.log(product);
+    //console.log(product);
     if (!user) {
       throw new BadRequestError(`No user info sent`);
     }
