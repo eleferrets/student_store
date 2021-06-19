@@ -12,7 +12,7 @@ export default function AddProduct( AddProduct) {
   const handleOnSubmit = async () => {
     setIsProcessing(true);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_REMOTE_HOST_URL}/store/products/`, {post: form});
+      const res = await axios.post(`http://localhost:3000/store/products/`, {post: form});
       if (res?.data?.product) {
         AddProduct(res.data.product)
       }

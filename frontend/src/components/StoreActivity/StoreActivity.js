@@ -25,7 +25,7 @@ export default function StoreActivity({ products = [] }) {
                 {product.description}
                 </span> */}
               <div className="">{product.category.toUpperCase()}</div>
-              <div className="">{formatAmount(product.price)}</div>
+              <div className="">{"$"+product.price}</div>
               </span>
               {/* <span className="col x15">{formatDate(product.postedAt)}</span> */}
             </Link>

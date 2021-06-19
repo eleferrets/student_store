@@ -1,0 +1,14 @@
+{
+  "cart": [
+    {
+      "Rice Krispies": 2,
+      "Flamin Hot Cheetos": 1
+    }
+  ],
+  "userInfo": [
+    {
+      "name": "Person",
+      "email": "person@person.io"
+    }
+  ]
+}
