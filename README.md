@@ -29,7 +29,6 @@ Deployed Application (optional): [Student Store Deployed Site]()
 ![image](assignment2f1.gif)
 ![image](assignment2f2.gif)
 ![image](assignment2f3.gif)
-![video]("Assignment 2F.mp4")
 
 ### Reflection
 
