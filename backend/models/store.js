@@ -119,7 +119,7 @@ class Store {
     return newCart;
   }
   static async recordUser(user) {
-    // create a new product
+    // create a new user
     //console.log(product);
     if (!user) {
       throw new BadRequestError(`No user info sent`);
